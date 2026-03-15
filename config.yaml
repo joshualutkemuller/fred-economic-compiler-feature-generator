@@ -1,0 +1,25 @@
+api_key_file: keys/fred_api_key.txt
+start_date: 2000-01-01
+end_date:
+
+frequencies:
+  weekly:
+    - ICSA
+    - WALCL
+  monthly:
+    - CPIAUCSL
+    - UNRATE
+    - INDPRO
+  quarterly:
+    - GDPC1
+    - PCECC96
+
+feature_windows:
+  - 4
+  - 12
+
+output_paths:
+  raw: output/raw
+  processed: output/processed
+  masters: output/masters
+  features: output/features
