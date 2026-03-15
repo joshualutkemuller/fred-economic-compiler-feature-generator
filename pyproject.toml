@@ -1,0 +1,24 @@
+[project]
+name = "fred-economic-compiler-feature-generator"
+version = "0.1.0"
+description = "Download FRED economic series, build frequency masters, and generate features"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0.0",
+  "pyyaml>=6.0",
+  "requests>=2.31.0"
+]
+
+[project.scripts]
+fred-compiler = "fred_compiler.main:run"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
